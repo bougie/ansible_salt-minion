@@ -1,7 +1,7 @@
 ansible_salt-minion
 ===================
 
-This is a playbook is used to quickly install the minion of a saltstack architecture
+This playbook is used to quickly install the minion of a saltstack architecture
 
 ## HOW-TO
 
