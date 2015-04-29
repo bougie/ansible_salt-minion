@@ -1,6 +1,9 @@
 - include: debian_install.yml
   when: ansible_os_family == "Debian"
 
+- include: freebsd_install.yml
+  when: ansible_os_family == "FreeBSD"
+
 - name: ensuire salt-minion is running
   service: name=salt-minion state=started
 

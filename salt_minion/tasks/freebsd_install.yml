@@ -1,0 +1,2 @@
+- name: install salt-minion
+  pkgng: name=py27-salt state=present
