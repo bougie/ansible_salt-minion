@@ -1,2 +1,2 @@
 - name: restart salt-minion
-  service: name=salt-minion state=restarted
+  service: name={{salt_minion_service}} state=restarted
