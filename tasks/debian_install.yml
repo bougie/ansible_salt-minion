@@ -1,0 +1,11 @@
+- name: add saltstack repository
+  apt_repository: repo='deb http://debian.saltstack.com/debian wheezy-saltstack main' state=present update_cache=yes
+
+- name: add gpg key for the saltstack repository
+  apt_key: url=http://debian.saltstack.com/debian-salt-team-joehealy.gpg.key state=present
+
+- name: update repository catalog
+  apt: update_cache=yes
+
+- name: install salt-minion
+  apt: name=salt-minion state=present install_recommends=no
