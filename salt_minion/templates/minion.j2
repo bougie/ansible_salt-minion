@@ -8,7 +8,11 @@
 
 # Set the location of the salt master server, if the master server cannot be
 # resolved, then the minion will fail to start.
+{% if groups['salt_master'][0] %}
 master: {{groups['salt_master'][0]}}
+{% else %}
+master: localhost
+{% endif %}
 
 # Set whether the minion should connect to the master via IPv6
 #ipv6: False
